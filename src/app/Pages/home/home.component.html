@@ -1,0 +1,198 @@
+<div class="page">
+
+  <main>
+    <section id="hero" class="hero">
+      <div class="hero-content">
+        <p class="eyebrow">Enterprise-grade delivery</p>
+        <h1>Premium software engineering for teams that need results, fast.</h1>
+        <p class="lede">
+          Aalekhan Software partners with product leaders to design, build, and scale secure, high-performing
+          platforms—cloud-native, AI-ready, and built for growth.
+        </p>
+        <div class="hero-ctas">
+          <a class="primary-btn" href="#contact">Book a discovery call</a>
+          <a class="ghost-btn" href="#cases">View recent wins</a>
+        </div>
+        <div class="metrics">
+          <div class="metric">
+            <span class="number">99.99%</span>
+            <span class="label">Uptime architectures</span>
+          </div>
+          <div class="metric">
+            <span class="number">12M+</span>
+            <span class="label">Events processed daily</span>
+          </div>
+          <div class="metric">
+            <span class="number">6</span>
+            <span class="label">Weeks to first release</span>
+          </div>
+        </div>
+      </div>
+      <div class="hero-card">
+        <div class="card-title">Engagement snapshot</div>
+        <ul class="pill-list">
+          <li>Discovery + architecture blueprint</li>
+          <li>Secure-by-design, cloud-native delivery</li>
+          <li>Weekly demos with performance baselines</li>
+          <li>Support for SOC2/ISO-ready practices</li>
+        </ul>
+        <div class="card-foot">
+          <span class="status-dot"></span>
+          <span>Now booking Q2 starts</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="services" class="section">
+      <div class="section-header">
+        <p class="eyebrow">What we do</p>
+        <h2>Specialized teams for modern software delivery.</h2>
+        <p class="lede">
+          Cross-functional squads covering strategy, UX, full-stack engineering, cloud, data, and QA—tailored to your roadmap.
+        </p>
+      </div>
+      <div class="card-grid">
+        <article class="card" *ngFor="let service of services">
+          <div class="icon" [attr.data-icon]="service.icon"></div>
+          <h3>{{ service.title }}</h3>
+          <p>{{ service.description }}</p>
+          <a href="#contact" class="link">Talk to an expert →</a>
+        </article>
+      </div>
+    </section>
+
+    <section id="approach" class="section alt">
+      <div class="section-header">
+        <p class="eyebrow">How we deliver</p>
+        <h2>Low-risk, transparent execution with measurable outcomes.</h2>
+      </div>
+      <div class="timeline">
+        <div class="step">
+          <span class="step-num">01</span>
+          <h3>Discovery sprint</h3>
+          <p>Product brief, user journeys, architecture options, delivery roadmap.</p>
+        </div>
+        <div class="step">
+          <span class="step-num">02</span>
+          <h3>Build & validate</h3>
+          <p>Secure-by-default builds, CI/CD, design systems, observability in place.</p>
+        </div>
+        <div class="step">
+          <span class="step-num">03</span>
+          <h3>Launch & scale</h3>
+          <p>Load/perf tuning, SRE practices, rollout strategy, handover or co-own.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="cases" class="section">
+      <div class="section-header">
+        <p class="eyebrow">Recent outcomes</p>
+        <h2>Case studies that pair velocity with rigor.</h2>
+      </div>
+      <div class="case-grid">
+        <article class="case" *ngFor="let cs of caseStudies">
+          <div class="metric-badge">{{ cs.metric }}</div>
+          <h3>{{ cs.name }}</h3>
+          <p class="impact">{{ cs.impact }}</p>
+          <p class="result">{{ cs.result }}</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="testimonials" class="section alt">
+      <div class="section-header">
+        <p class="eyebrow">What leaders say</p>
+        <h2>Trusted by product and engineering teams.</h2>
+      </div>
+      <div class="testimonial-grid">
+        <article class="quote" *ngFor="let t of testimonials">
+          <p class="quote-text">“{{ t.quote }}”</p>
+          <p class="quote-meta">{{ t.name }} — {{ t.role }}</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="tech" class="section">
+      <div class="section-header">
+        <p class="eyebrow">Tech we love</p>
+        <h2>Modern stacks for resilient products.</h2>
+      </div>
+      <div class="chip-row">
+        <span class="chip">Angular</span>
+        <span class="chip">React</span>
+        <span class="chip">Node.js</span>
+        <span class="chip">.NET</span>
+        <span class="chip">Python</span>
+        <span class="chip">PostgreSQL</span>
+        <span class="chip">MongoDB</span>
+        <span class="chip">Azure</span>
+        <span class="chip">AWS</span>
+        <span class="chip">GCP</span>
+        <span class="chip">Kubernetes</span>
+        <span class="chip">Terraform</span>
+      </div>
+    </section>
+
+    <section id="faqs" class="section alt">
+      <div class="section-header">
+        <p class="eyebrow">FAQs</p>
+        <h2>Answers to common questions.</h2>
+      </div>
+      <div class="faq-list">
+        <details *ngFor="let faq of faqs">
+          <summary>{{ faq.question }}</summary>
+          <p>{{ faq.answer }}</p>
+        </details>
+      </div>
+    </section>
+
+    <section id="contact" class="section contact">
+      <div class="section-header">
+        <p class="eyebrow">Start a conversation</p>
+        <h2>Tell us about your roadmap.</h2>
+        <p class="lede">We respond within one business day with next steps.</p>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-card">
+          <h3>Why teams choose Aalekhan</h3>
+          <ul class="pill-list">
+            <li>Design-to-delivery teams with security and SRE embedded</li>
+            <li>Transparent execution, dashboards, and weekly demos</li>
+            <li>Performance budgets and accessibility baked in</li>
+            <li>Touch-friendly, mobile-first UX with tested dropdown behavior</li>
+          </ul>
+        </div>
+        <form class="form" (ngSubmit)="handleSubmit($event)" novalidate>
+          <label>
+            Name
+            <input name="name" [(ngModel)]="formData.name" required placeholder="Your name" />
+          </label>
+          <label>
+            Work email
+            <input name="email" type="email" [(ngModel)]="formData.email" required placeholder="name@company.com" />
+          </label>
+          <label class="select-wrap">
+            Project type
+            <select name="projectType" [(ngModel)]="formData.projectType" aria-label="Project type">
+              <option value="" disabled>Select one</option>
+              <option value="product">New product build</option>
+              <option value="modernization">Modernization</option>
+              <option value="ai">AI & automation</option>
+              <option value="mobile">Mobile & web experience</option>
+              <option value="cloud">Cloud/DevOps</option>
+            </select>
+            <span class="chevron">▾</span>
+          </label>
+          <label>
+            Project details
+            <textarea name="message" [(ngModel)]="formData.message" rows="4" placeholder="Goals, timeline, constraints"></textarea>
+          </label>
+          <button class="primary-btn" type="submit">Book my call</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+</div>
+

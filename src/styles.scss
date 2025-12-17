@@ -1,0 +1,155 @@
+:root {
+  /* Primary Colors - Professional Teal */
+  --primary: #007da6;
+  --primary2: #22a8d2;
+  --primary-dark: #00658a;
+  --primary-light: #4fc0e3;
+  --primary-lighter: #81d4ed;
+  --primary-lightest: #e3f6fc;
+
+  /* Secondary Colors */
+  --secondary: #0f3045;
+  --secondary2: #13435f;
+  --secondary-light: #3d6682;
+  --secondary-lighter: #6a8aa1;
+  --secondary-lighter2: #9eb5c7;
+  --secondary-lightest: #e6edf2;
+
+  /* Accent Colors - Professional & Modern */
+  --accent: #ffb649;
+  --accent2: #ffb75e;
+  --accent-light: #ffc674;
+  --accent-lighter: #ffd69e;
+  --accent-lightest: #fff4e4;
+
+  /* Neutral Colors */
+  --neutral-dark: #2c3e50;
+  --neutral-medium: #607d8b;
+  --neutral-light: #b0bec5;
+  --neutral-lightest: #eceff1;
+  --neutral-dark2: #2d3748;
+  --neutral-medium2: #718096;
+  --neutral-light2: #e2e8f0;
+  --neutral-lightest2: #f7fafc;
+
+  /* Success/Error Colors */
+  --success: #2ecc71;
+  --error: #e74c3c;
+
+  /* Font Family Variables - Premium Combinations */
+  --font-primary: 'Poppins', sans-serif;
+  --font-secondary: 'Playfair Display', serif;
+  --font-accent: 'DM Sans', sans-serif;
+
+  /* Font Weights - Refined Scale */
+  --font-light: 300;
+  --font-regular: 400;
+  --font-medium: 500;
+  --font-semibold: 600;
+  --font-bold: 700;
+
+  /* Font Sizes - Responsive Typography */
+  --text-xs: clamp(0.75rem, 0.7rem + 0.25vw, 0.875rem);
+  --text-sm: clamp(0.875rem, 0.8rem + 0.375vw, 1rem);
+  --text-base: clamp(1rem, 0.95rem + 0.25vw, 1.125rem);
+  --text-lg: clamp(1.125rem, 1.1rem + 0.25vw, 1.25rem);
+  --text-xl: clamp(1.25rem, 1.2rem + 0.5vw, 1.5rem);
+  --text-2xl: clamp(1.5rem, 1.4rem + 0.5vw, 2rem);
+  --text-3xl: clamp(1.875rem, 1.8rem + 0.75vw, 2.5rem);
+  --text-4xl: clamp(2.25rem, 2.2rem + 1vw, 3rem);
+  --text-5xl: clamp(3rem, 2.8rem + 1.5vw, 4rem);
+
+  /* Line Heights */
+  --leading-tight: 1.2;
+  --leading-snug: 1.375;
+  --leading-normal: 1.5;
+  --leading-relaxed: 1.625;
+  --leading-loose: 2;
+
+  /* Spacing */
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 1rem;
+  --spacing-md: 1.5rem;
+  --spacing-lg: 2rem;
+  --spacing-xl: 3rem;
+
+  /* Border Radius */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+
+  /* Shadows */
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+
+  /* Legacy/compat palette mapped to new scheme for existing components */
+  --primary-700: var(--primary-dark);
+  --primary-600: var(--primary);
+  --primary-500: var(--primary2);
+  --primary-400: var(--primary-light);
+  --primary-300: var(--primary-lighter);
+  --primary-200: #b8e8f5;
+  --primary-100: var(--primary-lightest);
+
+  --accent-600: #ff8a3d;
+  --accent-500: var(--accent2);
+  --accent-100: var(--accent-lightest);
+
+  --gray-900: var(--neutral-dark);
+  --gray-800: #1f2937;
+  --gray-700: #334155;
+  --gray-600: var(--neutral-medium);
+  --gray-500: #64748b;
+  --gray-400: var(--neutral-light);
+  --gray-300: #cbd5e1;
+  --gray-200: var(--neutral-light2);
+  --gray-100: var(--neutral-lightest2);
+  --gray-50: #f8fafc;
+
+  /* Semantic */
+  --success-500: var(--success);
+  --warning-500: #f59e0b;
+  --danger-500: var(--error);
+
+  /* Typography */
+  --font-sans: var(--font-primary);
+  --font-display: var(--font-secondary);
+
+  /* Elevation */
+  --shadow-soft: 0 10px 40px rgba(15, 23, 42, 0.08);
+  --shadow-strong: 0 20px 60px rgba(15, 23, 42, 0.12);
+
+  /* Gradients */
+  --gradient-hero: radial-gradient(circle at 10% 20%, rgba(34, 168, 210, 0.28), transparent 40%), radial-gradient(circle at 90% 10%, rgba(0, 125, 166, 0.3), transparent 38%), linear-gradient(135deg, rgba(34, 168, 210, 0.22), rgba(0, 125, 166, 0.16));
+  --gradient-card: linear-gradient(135deg, rgba(34, 168, 210, 0.1), rgba(0, 125, 166, 0.04));
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  background: var(--gray-50);
+  color: var(--gray-900);
+  min-height: 100vh;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+button {
+  font-family: inherit;
+}

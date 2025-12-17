@@ -1,0 +1,42 @@
+<header class="header">
+  <div class="brand">
+    <a routerLink="/" class="brand-logo" aria-label="Aalekhan Software">
+      <img src="assets/logo/aalekhan_logo.jpeg" alt="Aalekhan Software logo" />
+    </a>
+  </div>
+
+  <div class="nav-wrap">
+    <button class="menu-btn" (click)="toggleMenu()" [attr.aria-expanded]="menuOpen" aria-label="Toggle navigation">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="nav" [class.open]="menuOpen">
+      <a routerLink="/" fragment="hero" (click)="onNavClick()">Home</a>
+
+      <div class="dropdown" [class.open]="solutionsOpen">
+        <button
+          class="dropdown-toggle"
+          (click)="toggleSolutions($event)"
+          [attr.aria-expanded]="solutionsOpen"
+          aria-haspopup="true"
+        >
+          Solutions
+          <span class="chevron">▾</span>
+        </button>
+        <div class="dropdown-menu">
+          <a routerLink="/" fragment="services" (click)="onNavClick()">Product Engineering</a>
+          <a routerLink="/" fragment="services" (click)="onNavClick()">AI & Automation</a>
+          <a routerLink="/" fragment="services" (click)="onNavClick()">Cloud & DevOps</a>
+          <a routerLink="/" fragment="services" (click)="onNavClick()">Modernization</a>
+        </div>
+      </div>
+
+      <a routerLink="/" fragment="cases" (click)="onNavClick()">Case Studies</a>
+      <a routerLink="/" fragment="tech" (click)="onNavClick()">Tech Stack</a>
+      <a routerLink="/" fragment="faqs" (click)="onNavClick()">FAQs</a>
+      <a routerLink="/" fragment="contact" (click)="onNavClick()">Contact</a>
+      <a class="primary-btn cta" routerLink="/" fragment="contact" (click)="onNavClick()">Book a call</a>
+    </nav>
+  </div>
+</header>
+
