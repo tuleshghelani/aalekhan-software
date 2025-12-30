@@ -1,12 +1,85 @@
 <footer class="footer">
-  <div class="footer-left">
-    <span class="brand">Aalekhan Software</span>
-    <span class="muted">© {{ year }}. Secure, modern software delivery.</span>
-  </div>
-  <div class="footer-links">
-    <a routerLink="/" fragment="services">Services</a>
-    <a routerLink="/" fragment="cases">Case Studies</a>
-    <a routerLink="/" fragment="contact">Contact</a>
+  <div class="footer-container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a routerLink="/" class="brand-logo" aria-label="Aalekhan Software Home">
+          <img src="assets/logo/aalekhan_logo.jpeg" alt="Aalekhan Software logo" />
+        </a>
+        <h2 class="brand-name">Aalekhan Software</h2>
+        <p class="brand-slogan">Digitize your life</p>
+        <p class="brand-tagline">
+          Leading <strong>software development company</strong> delivering 
+          <strong>custom software development</strong> and <strong>enterprise solutions</strong> 
+          for modern businesses worldwide.
+        </p>
+      </div>
+
+      <div class="footer-columns">
+        <div class="footer-column">
+          <h3>Services</h3>
+          <nav class="footer-nav" aria-label="Footer services navigation">
+            <ul>
+              <li><a routerLink="/" fragment="services" aria-label="Custom Software Development">Custom Software Development</a></li>
+              <li><a routerLink="/" fragment="services" aria-label="Full Stack Development">Full Stack Development</a></li>
+              <li><a routerLink="/" fragment="services" aria-label="Web Application Development">Web Application Development</a></li>
+              <li><a routerLink="/" fragment="services" aria-label="SaaS Application Development">SaaS Application Development</a></li>
+              <li><a routerLink="/" fragment="services" aria-label="Digital Transformation">Digital Transformation</a></li>
+            </ul>
+          </nav>
+        </div>
+
+        <div class="footer-column">
+          <h3>Company</h3>
+          <nav class="footer-nav" aria-label="Footer company navigation">
+            <ul>
+              <li><a routerLink="/" fragment="hero" aria-label="About Us">About Us</a></li>
+              <li><a routerLink="/" fragment="cases" aria-label="Case Studies">Case Studies</a></li>
+              <li><a routerLink="/" fragment="tech" aria-label="Tech Stack">Tech Stack</a></li>
+              <li><a routerLink="/" fragment="faqs" aria-label="FAQs">FAQs</a></li>
+              <li><a routerLink="/" fragment="contact" aria-label="Contact Us">Contact Us</a></li>
+            </ul>
+          </nav>
+        </div>
+
+        <div class="footer-column">
+          <h3>Contact</h3>
+          <div class="contact-info">
+            <div class="contact-item">
+              <strong>Phone:</strong>
+              <a href="tel:+918401428050" class="contact-link" aria-label="Call Aalekhan Software at +91 8401428050">
+                +91 8401428050
+              </a>
+            </div>
+            <div class="contact-item">
+              <strong>Email:</strong>
+              <a href="mailto:info@aalekhansoftware.com" class="contact-link" aria-label="Email Aalekhan Software">
+                info&#64;aalekhansoftware.com
+              </a>
+            </div>
+            <div class="contact-item">
+              <strong>Website:</strong>
+              <a href="https://aalekhansoftware.com" class="contact-link" target="_blank" rel="noopener noreferrer" aria-label="Visit Aalekhansoftware.com">
+                aalekhansoftware.com
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="footer-bottom-content">
+        <p class="copyright">
+          © {{ year }} <strong>Aalekhan Software</strong>. All rights reserved. 
+          <span class="separator">|</span> 
+          <span class="tagline">Digitize your life | Secure, modern software delivery.</span>
+        </p>
+        <div class="footer-legal">
+          <a routerLink="/" fragment="contact" class="legal-link" aria-label="Privacy Policy">Privacy Policy</a>
+          <span class="separator">|</span>
+          <a routerLink="/" fragment="contact" class="legal-link" aria-label="Terms of Service">Terms of Service</a>
+        </div>
+      </div>
+    </div>
   </div>
 </footer>
-

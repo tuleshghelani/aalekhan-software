@@ -49,33 +49,53 @@ export class HomeComponent implements OnInit {
 
   services: Service[] = [
     {
-      title: 'Product Engineering',
-      description: 'From discovery to launch with cloud-native, scalable builds.',
+      title: 'Custom Software Development',
+      description: 'Tailored software solutions designed to meet your unique business requirements and drive growth.',
       icon: 'ph-lightning',
     },
     {
-      title: 'AI & Automation',
-      description: 'Practical AI, data pipelines, and workflow automation at scale.',
-      icon: 'ph-brain',
+      title: 'Full Stack Development',
+      description: 'End-to-end development services covering frontend, backend, and database layers for complete solutions.',
+      icon: 'ph-code',
     },
     {
-      title: 'Cloud & DevOps',
-      description: 'Reliable CI/CD, IaC, and SRE practices for resilient releases.',
+      title: 'Frontend Development Services',
+      description: 'Modern, responsive user interfaces built with React, Angular, and Vue.js for exceptional user experiences.',
+      icon: 'ph-browser',
+    },
+    {
+      title: 'Backend Development Services',
+      description: 'Scalable server-side solutions with Node.js, Java, .NET, and Python for robust application architecture.',
+      icon: 'ph-server',
+    },
+    {
+      title: 'API Development Services',
+      description: 'RESTful and GraphQL APIs designed for seamless integration and optimal performance.',
+      icon: 'ph-plug',
+    },
+    {
+      title: 'Web Application Development',
+      description: 'Enterprise-grade web applications and SPAs built with modern frameworks and best practices.',
+      icon: 'ph-globe',
+    },
+    {
+      title: 'SaaS Application Development',
+      description: 'Cloud-native SaaS platforms with multi-tenancy, scalability, and subscription management.',
       icon: 'ph-cloud',
     },
     {
-      title: 'Modernization',
-      description: 'Re-architect legacy systems into secure, modular services.',
+      title: 'ERP & CRM Development',
+      description: 'Custom ERP and CRM software solutions tailored to streamline your business operations.',
+      icon: 'ph-chart-line',
+    },
+    {
+      title: 'Digital Transformation',
+      description: 'Comprehensive digital transformation services to modernize legacy systems and drive innovation.',
       icon: 'ph-rocket',
     },
     {
-      title: 'Mobile & Web',
-      description: 'Premium web, iOS, and Android experiences with responsive UX.',
-      icon: 'ph-device',
-    },
-    {
-      title: 'Dedicated Squads',
-      description: 'Cross-functional teams that integrate with your product org.',
+      title: 'Dedicated Development Team',
+      description: 'Expert development teams that integrate seamlessly with your organization for long-term success.',
       icon: 'ph-users',
     },
   ];
@@ -153,25 +173,27 @@ export class HomeComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.title.setTitle('Aalekhan Software | Custom Software Development & Product Engineering');
+    this.title.setTitle('Aalekhan Software | Digitize your life | Custom Software Development Company');
     this.meta.addTags([
       {
         name: 'description',
         content:
-          'Aalekhan Software delivers premium product engineering, cloud, AI, and modernization services with secure, scalable architectures.',
+          'Aalekhan Software - Digitize your life. Leading software development company offering custom software development, full stack development, web application development services, SaaS application development, ERP/CRM software development, and dedicated development teams. Expert IT services company and software solutions provider.',
       },
       {
         name: 'keywords',
         content:
-          'software development company, product engineering, cloud native, devops, AI automation, modernization, custom software, dedicated teams',
+          'software development company, custom software development, IT services company, software solutions provider, enterprise software development, business software solutions, digital transformation services, backend development services, API development services, frontend development services, SPA development company, full stack development company, full stack Java developer company, web application development services, software outsourcing company, dedicated development team, custom ERP software development, CRM software development services, SaaS application development',
       },
-      { property: 'og:title', content: 'Aalekhan Software | Software Development Company' },
+      { property: 'og:title', content: 'Aalekhan Software | Digitize your life | Custom Software Development Company' },
       {
         property: 'og:description',
         content:
-          'Partner with Aalekhan Software for high-performing product engineering, AI, DevOps, and modernization.',
+          'Digitize your life with Aalekhan Software. Leading software development company providing custom software development, full stack development, web applications, SaaS, ERP/CRM solutions, and dedicated development teams.',
       },
       { property: 'og:type', content: 'website' },
+      { name: 'robots', content: 'index, follow' },
+      { name: 'author', content: 'Aalekhan Software' },
     ]);
 
     const canonical = this.renderer.createElement('link');
@@ -181,26 +203,66 @@ export class HomeComponent implements OnInit {
 
     const ldJson = {
       '@context': 'https://schema.org',
-      '@type': 'SoftwareCompany',
+      '@type': 'SoftwareApplication',
       name: 'Aalekhan Software',
-      url: this.document.defaultView?.location.href ?? 'https://aalekhan.software',
+      applicationCategory: 'SoftwareDevelopmentCompany',
+      operatingSystem: 'Web, Cloud',
+      offers: {
+        '@type': 'Offer',
+        price: '0',
+        priceCurrency: 'USD',
+      },
+      aggregateRating: {
+        '@type': 'AggregateRating',
+        ratingValue: '4.9',
+        reviewCount: '150',
+      },
+    };
+
+    const organizationJson = {
+      '@context': 'https://schema.org',
+      '@type': 'Organization',
+      name: 'Aalekhan Software',
+      url: this.document.defaultView?.location.href ?? 'https://aalekhansoftware.com',
       logo: '/assets/logo/aalekhan_logo.jpeg',
       description:
-        'Aalekhan Software builds secure, scalable products with cloud, AI, and DevOps expertise.',
+        'Leading software development company providing custom software development, full stack development, web application development services, SaaS application development, ERP/CRM software development, and dedicated development teams.',
       sameAs: ['https://www.linkedin.com', 'https://twitter.com'],
       contactPoint: [
         {
           '@type': 'ContactPoint',
           contactType: 'sales',
-          email: 'hello@aalekhan.software',
+          telephone: '+91-8401428050',
+          email: 'info@aalekhansoftware.com',
+          areaServed: 'Worldwide',
+          availableLanguage: ['English'],
         },
+      ],
+      areaServed: {
+        '@type': 'Country',
+        name: 'Worldwide',
+      },
+      knowsAbout: [
+        'Custom Software Development',
+        'Full Stack Development',
+        'Web Application Development',
+        'SaaS Application Development',
+        'ERP Software Development',
+        'CRM Software Development',
+        'API Development',
+        'Digital Transformation',
       ],
     };
 
-    const script = this.renderer.createElement('script');
-    script.type = 'application/ld+json';
-    script.text = JSON.stringify(ldJson);
-    this.renderer.appendChild(this.document.head, script);
+    const script1 = this.renderer.createElement('script');
+    script1.type = 'application/ld+json';
+    script1.text = JSON.stringify(ldJson);
+    this.renderer.appendChild(this.document.head, script1);
+
+    const script2 = this.renderer.createElement('script');
+    script2.type = 'application/ld+json';
+    script2.text = JSON.stringify(organizationJson);
+    this.renderer.appendChild(this.document.head, script2);
   }
 
   toggleMenu(): void {
@@ -222,6 +284,25 @@ export class HomeComponent implements OnInit {
     }
     if (!target.closest('.nav-menu') && this.menuOpen) {
       this.menuOpen = false;
+    }
+  }
+
+  @HostListener('document:click', ['$event'])
+  handleClick(event: MouseEvent): void {
+    const target = event.target as HTMLElement;
+    if (!target.closest('.nav-dropdown') && this.solutionsOpen) {
+      this.solutionsOpen = false;
+    }
+    if (!target.closest('.nav-menu') && !target.closest('.menu-btn') && this.menuOpen) {
+      this.menuOpen = false;
+    }
+  }
+
+  @HostListener('window:resize')
+  handleResize(): void {
+    if (window.innerWidth > 768) {
+      this.menuOpen = false;
+      this.solutionsOpen = false;
     }
   }
 
